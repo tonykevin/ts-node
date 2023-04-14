@@ -7,4 +7,4 @@ const iroman = new SuperHero('Iroman', 1, 55)
 console.log({ Hero })
 console.log({ iroman })
 
-console.log(powers)
+console.log(powers.power)
