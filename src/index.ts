@@ -1,10 +1,4 @@
+import { Hero } from './classes/Hero'
 
-
-console.log('Hola Mundo!');
-
-
-
-
-
-
-
+const iroman = new Hero('Iroman', 1, 55)
+console.log({ iroman })
