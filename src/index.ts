@@ -1,4 +1,7 @@
-import { Hero } from './classes/Hero'
+import { Hero as SuperHero } from './classes/Hero'
 
-const iroman = new Hero('Iroman', 1, 55)
+const Hero = 123
+
+const iroman = new SuperHero('Iroman', 1, 55)
+console.log({ Hero })
 console.log({ iroman })
