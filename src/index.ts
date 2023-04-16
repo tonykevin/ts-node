@@ -1,6 +1,5 @@
 import { genericArrowFunction } from './generics/generics'
-import { Hero } from './interfaces/hero'
-import { Villian } from './interfaces/villian'
+import { Hero, Villian } from './interfaces'
 
 const deadpool = {
   name: 'Deadpool',
