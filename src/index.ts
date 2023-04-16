@@ -1,5 +1,13 @@
-import { genericArrowFunction, genericFunction } from './generics/generics'
+import { genericArrowFunction } from './generics/generics'
+import { Hero } from './interfaces/hero'
+import { Villian } from './interfaces/villian'
 
-console.log(genericFunction(3.1416).toFixed(2))
-console.log(genericFunction('Hola mundo').toUpperCase())
-console.log(genericArrowFunction(new Date()).getDate())
+const deadpool = {
+  name: 'Deadpool',
+  realName: 'Wade Winston Wilson',
+  dangerLevel: 130,
+}
+
+console.log(genericArrowFunction(deadpool).realName)
+console.log(genericArrowFunction<Hero>(deadpool).realName)
+console.log(genericArrowFunction<Villian>(deadpool).dangerLevel)

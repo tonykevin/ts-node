@@ -1,9 +1,9 @@
-export const printObject = (argument: any): void => {
-  console.log(argument)
+export const printObject = (parameter: any): void => {
+  console.log(parameter)
 }
 
-export function genericFunction<T>(argument: T) {
-  return argument
+export function genericFunction<T>(parameter: T) {
+  return parameter
 }
 
-export const genericArrowFunction = <T>(argument: T) => argument
+export const genericArrowFunction = <T>(parameter: T) => parameter
