@@ -1,10 +1,10 @@
-import { Hero as SuperHero } from './classes/Hero'
-import powers from './data/powers'
+import { genericFunction, printObject } from './generics/generics'
 
-const Hero = 123
+printObject(123)
+printObject(new Date())
+printObject({ a: 1, b: 2, c: 3 })
+printObject([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+printObject('Hola mundo')
 
-const iroman = new SuperHero('Iroman', 1, 55)
-console.log({ Hero })
-console.log({ iroman })
-
-console.log(powers.power)
+console.log(genericFunction(3.1416).toFixed(2))
+// console.log(genericFunction('Hola mundo').toFixed(2))
