@@ -1,12 +1,6 @@
-import { genericArrowFunction } from './generics/generics'
-import { Hero, Villian } from './interfaces'
+import { getPokemon } from './generics/getPokemon'
 
-const deadpool = {
-  name: 'Deadpool',
-  realName: 'Wade Winston Wilson',
-  dangerLevel: 130,
-}
-
-console.log(genericArrowFunction(deadpool).realName)
-console.log(genericArrowFunction<Hero>(deadpool).realName)
-console.log(genericArrowFunction<Villian>(deadpool).dangerLevel)
+getPokemon(4)
+  .then(resp => console.log(resp))
+  .catch(error => console.error(error))
+  .finally(() => console.log('Finished to get pokemon'))
