@@ -38,3 +38,20 @@ Si deseas restringir los paramétros, se especifica el parámetro.
 genericArrowFunction<Hero>(deadpool).realName
 genericArrowFunction<Villian>(deadpool).dangerLevel
 ```
+
+## Decoradores
+
+Son funciones que permiten expandir funcionalidades a un objecto.
+
+```ts
+function printToConsole(constructor: Function) {
+  console.log(constructor)
+}
+
+@printToConsole
+export class Pokemon {
+  public publicApi = 'https://pokeapi.co'
+
+  constructor(public name: string) {}
+}
+```
