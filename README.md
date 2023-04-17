@@ -55,3 +55,7 @@ export class Pokemon {
   constructor(public name: string) {}
 }
 ```
+
+### Decoradores de fábrica
+
+Se denomina al proceso donde una función resuelve otra función según los argumentos.
