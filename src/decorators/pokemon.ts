@@ -1,24 +1,28 @@
-function printToConsole(constructor: Function) {
-  console.log(constructor)
-}
+function checkValidPokemonId() {
+  return function (
+    target: any,
+    propertyKey: string,
+    descriptor: PropertyDescriptor
+  ) {
+    const originalMethod = descriptor.value
 
-const printToConsoleConditional = (isPrinted = false): Function => {
-  if (isPrinted) {
-    return printToConsole
+    descriptor.value = (id: number) => {
+      if (id < 1 || id > 800) {
+        return console.error('El id del pokemon debe de estar entre 1 y 800')
+      } else {
+        originalMethod(id)
+      }
+    }
   }
-
-  return () => {}
 }
 
-const lockPrototype = function (constructor: Function) {
-  Object.seal(constructor)
-  Object.seal(constructor.prototype)
-}
-
-@lockPrototype
-@printToConsoleConditional(true)
 export class Pokemon {
   public publicApi = 'https://pokeapi.co'
 
   constructor(public name: string) {}
+
+  @checkValidPokemonId()
+  savePokemonToDB(id: number) {
+    console.log(`Pokemon is saved in DB ${id}`)
+  }
 }
