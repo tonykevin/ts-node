@@ -1,1 +1,1 @@
-export { checkValidPokemonId } from './pokemon'
+export { checkValidPokemonId, readonly } from './pokemon'

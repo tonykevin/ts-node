@@ -1,6 +1,7 @@
-import { checkValidPokemonId } from '../decorators'
+import { checkValidPokemonId, readonly } from '../decorators'
 
 export class Pokemon {
+  @readonly()
   public publicApi = 'https://pokeapi.co'
 
   constructor(public name: string) {}

@@ -15,3 +15,19 @@ export function checkValidPokemonId() {
     }
   }
 }
+
+export function readonly(isWritable = true): Function {
+  return function (target: any, propertyKey: string) {
+    const descriptor: PropertyDescriptor = {
+      set(this, value) {
+        Object.defineProperty(this, propertyKey, {
+          value,
+          writable: !isWritable,
+          enumerable: false,
+        })
+      },
+    }
+
+    return descriptor
+  }
+}
