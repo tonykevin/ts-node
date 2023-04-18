@@ -1,4 +1,4 @@
-function checkValidPokemonId() {
+export function checkValidPokemonId() {
   return function (
     target: any,
     propertyKey: string,
@@ -13,16 +13,5 @@ function checkValidPokemonId() {
         originalMethod(id)
       }
     }
-  }
-}
-
-export class Pokemon {
-  public publicApi = 'https://pokeapi.co'
-
-  constructor(public name: string) {}
-
-  @checkValidPokemonId()
-  savePokemonToDB(id: number) {
-    console.log(`Pokemon is saved in DB ${id}`)
   }
 }

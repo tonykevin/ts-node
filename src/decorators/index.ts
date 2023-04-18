@@ -1,0 +1,1 @@
+export { checkValidPokemonId } from './pokemon'

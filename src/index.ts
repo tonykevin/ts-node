@@ -1,4 +1,4 @@
-import { Pokemon } from './decorators/pokemon'
+import { Pokemon } from './classes'
 
 const charmander = new Pokemon('Charmander')
 
